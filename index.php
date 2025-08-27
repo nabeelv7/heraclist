@@ -13,12 +13,16 @@ switch ($request) {
         $page = __DIR__ . "/routes/new/page.php";
         break;
 
+    case "/create":
+        require __DIR__ . "/routes/actions/create.php";
+        exit; // don't load layout
+
     case "/update":
         require __DIR__ . "/routes/actions/update.php";
         exit; // don't load layout
 
-    case "/create":
-        require __DIR__ . "/routes/actions/create.php";
+    case "/delete":
+        require __DIR__ . "/routes/actions/delete.php";
         exit; // don't load layout
 
     default:
